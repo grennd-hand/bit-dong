@@ -17,11 +17,32 @@
 
 - 支持 Skills 的 Codex 环境
 - 可调用 `image_gen` 的图片生成能力
+- Node.js 与 npm（仅使用 `npx` 安装时需要）
 - Git（仅手动安装或更新时需要）
 
 ## 安装
 
-### 方法一：让 Codex 自动安装
+### 方法一：使用 npx skills（推荐）
+
+需要已安装 Node.js 和 npm。为 Codex 全局、非交互安装：
+
+```bash
+npx skills add grennd-hand/bit-dong \
+  --skill bitdong-illustrations \
+  -g \
+  -a codex \
+  -y
+```
+
+如果希望交互选择目标 AI 和安装范围：
+
+```bash
+npx skills add grennd-hand/bit-dong
+```
+
+这里运行的是通用 [skills CLI](https://github.com/vercel-labs/skills)；本仓库不需要发布为 npm 包。安装器会从 GitHub 下载 Skill，并放入所选 AI 的技能目录。
+
+### 方法二：让 Codex 自动安装
 
 在 Codex 中发送：
 
@@ -31,7 +52,7 @@
 
 安装完成后，在下一轮对话中即可使用。
 
-### 方法二：使用 Skill Installer 脚本
+### 方法三：使用 Skill Installer 脚本
 
 macOS / Linux：
 
@@ -51,7 +72,7 @@ python "$HOME\.codex\skills\.system\skill-installer\scripts\install-skill-from-g
   --name bitdong-illustrations
 ```
 
-### 方法三：使用 Git 手动安装
+### 方法四：使用 Git 手动安装
 
 macOS / Linux：
 
