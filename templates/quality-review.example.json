@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "project": null,
+  "character_id": "bitdong",
+  "design_version": null,
+  "master_set_id": null,
+  "reviewed_at": null,
+  "reviewed_by": null,
+  "structure": {
+    "status": "not_run",
+    "command": null,
+    "issues": []
+  },
+  "images": {
+    "status": "not_run",
+    "asset_ids": [],
+    "checks": [
+      "identity",
+      "glasses_and_eyes",
+      "outfit",
+      "hands",
+      "shoe_silhouette",
+      "watch_continuity"
+    ],
+    "issues": []
+  },
+  "video": {
+    "status": "not_run",
+    "provider": null,
+    "model": null,
+    "task_id": null,
+    "video_files": [],
+    "sampled_timestamps": [],
+    "checks": [
+      "opening_middle_ending",
+      "blink",
+      "turn",
+      "occlusion_recovery",
+      "hand_face_contact",
+      "foot_contact",
+      "cross_shot_continuity"
+    ],
+    "issues": []
+  },
+  "audio": {
+    "status": "not_run",
+    "dialogue_verified": false,
+    "lip_sync_verified": false,
+    "issues": []
+  },
+  "decision": "pending",
+  "notes": "模板不会自动批准资产。填写实际检查结果；没有视频或声音时保持not_run。"
+}

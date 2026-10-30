@@ -1,0 +1,804 @@
+{
+  "schema_version": "1.0",
+  "character_id": "bitdong",
+  "registered_at": "2026-10-30",
+  "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6",
+  "notes": [
+    "登记状态不等于视觉验收，candidate不得自动作为approved。",
+    "完整保留原素材字节；旧鞋版与旧例图只归档标记，不删除。"
+  ],
+  "assets": [
+    {
+      "id": "performance-body",
+      "path": "assets/character-reference/bitdong-body-language-sheet-v1.png",
+      "role": "performance_reference",
+      "status": "source",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "仅用于重心、姿势和动作；衣服与配件须遵循当前版本。"
+      ],
+      "sha256": "52d984561c9bd94925120b3216b856b55f9750b7252738b9849d9e05884d50ac",
+      "width": 1536,
+      "height": 1024,
+      "color_mode": "RGB",
+      "bytes": 1477695
+    },
+    {
+      "id": "archive-pre-custom-shoes",
+      "path": "assets/character-reference/bitdong-character-sheet-pre-custom-shoes.png",
+      "role": "design_source",
+      "status": "archived",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "旧白灰低帮鞋版本，与当前定制高帮鞋冲突；排除自动选图。"
+      ],
+      "sha256": "5f5bd42e370cf2cd07de330070b33f3cb8e1e40e344e5bfdec8c441ff92f3752",
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "bytes": 1846524
+    },
+    {
+      "id": "source-character-sheet",
+      "path": "assets/character-reference/bitdong-character-sheet.png",
+      "role": "design_source",
+      "status": "source",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "继承的动漫设计来源，四姿态共用1672×941画布；部分鞋字存在误写。"
+      ],
+      "sha256": "bd373fea07359068034f5fe4113f1ce7efb9247ce9d5dd05b064bafb58d3d608",
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "bytes": 1794606
+    },
+    {
+      "id": "performance-work",
+      "path": "assets/character-reference/bitdong-expression-sheet-v1.png",
+      "role": "performance_reference",
+      "status": "source",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "只指导表演。顿悟/兴奋等格的圆大眼和圆化镜框不得改写身份。"
+      ],
+      "sha256": "72cfda8e56c4fdba034c27baa4c7e8faca99dcc2022d6c86b33c4a5b6f675e46",
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "bytes": 1824138
+    },
+    {
+      "id": "identity-photo",
+      "path": "assets/character-reference/bitdong-portrait.jpg",
+      "role": "identity_source",
+      "status": "source",
+      "set_id": "legacy-source-20260813",
+      "single_subject": true,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "真人身份起源；建立或修订动画身份时才使用，不作为视频输入。"
+      ],
+      "sha256": "a1ad138fdfdef00e1a8a19e1dd5e9df0348cc5c2fe2406af94a026a1c92ed2c6",
+      "width": 1080,
+      "height": 1920,
+      "color_mode": "RGB",
+      "bytes": 421784
+    },
+    {
+      "id": "performance-social",
+      "path": "assets/character-reference/bitdong-social-expression-sheet-v1.png",
+      "role": "performance_reference",
+      "status": "source",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "仅用于情绪演出；不是独立高清脸部母版。"
+      ],
+      "sha256": "da531ac2397ed9b48fb982073abe6a71cf575605be89daf166c51fbdc0511697",
+      "width": 1448,
+      "height": 1086,
+      "color_mode": "RGB",
+      "bytes": 1987018
+    },
+    {
+      "id": "source-shoe-board",
+      "path": "assets/character-reference/shoes/bitdong-shoes-reference-board.jpg",
+      "role": "detail_source",
+      "status": "source",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "鞋型配色和字样来源，不能继承照片背景；BIT/DONG左右脚归属未核实。"
+      ],
+      "sha256": "4d955e0ac9fd55f0ccb843d6e2ed7745fd95f9c73edbc465ac910aea650d1a55",
+      "width": 2360,
+      "height": 1780,
+      "color_mode": "RGB",
+      "bytes": 1249257
+    },
+    {
+      "id": "source-shoe-reference-01",
+      "path": "assets/character-reference/shoes/shoe-reference-01.jpg",
+      "role": "detail_source",
+      "status": "source",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "原始高分辨率鞋照，只供鞋细节核对；不自动判断左右脚或复制拍摄环境。"
+      ],
+      "sha256": "1e49e5ee78134c1b0c1d96e638cc1539dcc52dcb8f5c20949eedeace28f77721",
+      "width": 5712,
+      "height": 4284,
+      "color_mode": "RGB",
+      "bytes": 4338562
+    },
+    {
+      "id": "source-shoe-reference-02",
+      "path": "assets/character-reference/shoes/shoe-reference-02.jpg",
+      "role": "detail_source",
+      "status": "source",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "原始高分辨率鞋照，只供鞋细节核对；不自动判断左右脚或复制拍摄环境。"
+      ],
+      "sha256": "d097b46dffb4f0519030fea62a65575af74cbff4a07863cb7fe6423a12632c9f",
+      "width": 5712,
+      "height": 4284,
+      "color_mode": "RGB",
+      "bytes": 2970231
+    },
+    {
+      "id": "source-shoe-reference-03",
+      "path": "assets/character-reference/shoes/shoe-reference-03.jpg",
+      "role": "detail_source",
+      "status": "source",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "原始高分辨率鞋照，只供鞋细节核对；不自动判断左右脚或复制拍摄环境。"
+      ],
+      "sha256": "c5848ddd3e9c67c1efb1cfdf84b4f3d1c42f2678fef23128760df37e6ba6ccbb",
+      "width": 5712,
+      "height": 4284,
+      "color_mode": "RGB",
+      "bytes": 3463004
+    },
+    {
+      "id": "source-shoe-reference-04",
+      "path": "assets/character-reference/shoes/shoe-reference-04.jpg",
+      "role": "detail_source",
+      "status": "source",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "原始高分辨率鞋照，只供鞋细节核对；不自动判断左右脚或复制拍摄环境。"
+      ],
+      "sha256": "eac0741e853cf598c175f9e3844439cc81600a9891935ed70be0a846d9416782",
+      "width": 5712,
+      "height": 4284,
+      "color_mode": "RGB",
+      "bytes": 3427020
+    },
+    {
+      "id": "master-back-candidate",
+      "path": "assets/character-reference/video-v2-candidates/bitdong-back.png",
+      "role": "character_master",
+      "status": "candidate",
+      "set_id": "bitdong-v2-candidate-20261030",
+      "single_subject": true,
+      "view": "back_full_body",
+      "provenance": {
+        "kind": "generated",
+        "tool": "built_in_image_gen",
+        "created_at": "2026-10-30",
+        "source_asset_ids": [
+          "master-front-candidate",
+          "source-shoe-board"
+        ],
+        "prompt_path": "assets/character-reference/video-v2-candidates/bitdong-back.prompt.txt",
+        "approved_by": null,
+        "approved_at": null
+      },
+      "visual_review": {
+        "reviewed_by": "assistant",
+        "reviewed_at": "2026-10-30",
+        "scope": "static_image_only",
+        "checks": [
+          {
+            "check": "single_subject_and_view",
+            "result": "pass",
+            "evidence": "已查看实际图像，独立单角色且视角与登记一致。"
+          },
+          {
+            "check": "major_identity_and_outfit",
+            "result": "pass",
+            "evidence": "短刺发、矩形眼镜（可见时）、粉色圆领卫衣、成人比例与2D风格延续父参考。"
+          },
+          {
+            "check": "requested_native_dimensions",
+            "result": "fail",
+            "evidence": "实际1024×1536低于生成提示目标，未插值放大。"
+          },
+          {
+            "check": "fine_shoe_artwork",
+            "result": "fail",
+            "evidence": "鞋子局部字样或图案仍有差异，详见notes。"
+          }
+        ],
+        "video_test_status": "not_run"
+      },
+      "notes": [
+        "正背面与角色左腕关系已查看；后脑和背部为候选推断。",
+        "鞋后跟黄橙线稿近似但未精确还原，原鞋Z/D等细节尚未统一。",
+        "实际原生1024×1536；没有插值放大，未达到生成提示中的更高尺寸目标。"
+      ],
+      "sha256": "cd35231c1f018d492dafeccccde8753611f292b96a2b3eb54be670de8447c88e",
+      "width": 1024,
+      "height": 1536,
+      "color_mode": "RGB",
+      "bytes": 1414272
+    },
+    {
+      "id": "master-face-candidate",
+      "path": "assets/character-reference/video-v2-candidates/bitdong-face-front.png",
+      "role": "character_master",
+      "status": "candidate",
+      "set_id": "bitdong-v2-candidate-20261030",
+      "single_subject": true,
+      "view": "front_face",
+      "provenance": {
+        "kind": "generated",
+        "tool": "built_in_image_gen",
+        "created_at": "2026-10-30",
+        "source_asset_ids": [
+          "master-front-candidate"
+        ],
+        "prompt_path": "assets/character-reference/video-v2-candidates/bitdong-face-front.prompt.txt",
+        "approved_by": null,
+        "approved_at": null
+      },
+      "visual_review": {
+        "reviewed_by": "assistant",
+        "reviewed_at": "2026-10-30",
+        "scope": "static_image_only",
+        "checks": [
+          {
+            "check": "single_subject_and_view",
+            "result": "pass",
+            "evidence": "已查看实际图像，独立单角色且视角与登记一致。"
+          },
+          {
+            "check": "major_identity_and_outfit",
+            "result": "pass",
+            "evidence": "短刺发、矩形眼镜（可见时）、粉色圆领卫衣、成人比例与2D风格延续父参考。"
+          },
+          {
+            "check": "requested_native_dimensions",
+            "result": "fail",
+            "evidence": "实际1254×1254低于生成提示目标，未插值放大。"
+          },
+          {
+            "check": "fine_shoe_artwork",
+            "result": "not_run",
+            "evidence": "本图未完成鞋子近景字样与左右脚映射验收；面部图无鞋子。"
+          }
+        ],
+        "video_test_status": "not_run"
+      },
+      "notes": [
+        "单人正面近景，眼睛与矩形镜框已查看。",
+        "该图实际1254×1254；未达到提示中的1536×1536目标。"
+      ],
+      "sha256": "1ff292c193d50582bda892f19ab546935c08a270dfce63de6f904d5200879a76",
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGB",
+      "bytes": 1867718
+    },
+    {
+      "id": "master-front-candidate",
+      "path": "assets/character-reference/video-v2-candidates/bitdong-front.png",
+      "role": "character_master",
+      "status": "candidate",
+      "set_id": "bitdong-v2-candidate-20261030",
+      "single_subject": true,
+      "view": "front_full_body",
+      "provenance": {
+        "kind": "generated",
+        "tool": "built_in_image_gen",
+        "created_at": "2026-10-30",
+        "source_asset_ids": [
+          "source-character-sheet",
+          "source-shoe-board"
+        ],
+        "prompt_path": "assets/character-reference/video-v2-candidates/bitdong-front.prompt.txt",
+        "approved_by": null,
+        "approved_at": null
+      },
+      "visual_review": {
+        "reviewed_by": "assistant",
+        "reviewed_at": "2026-10-30",
+        "scope": "static_image_only",
+        "checks": [
+          {
+            "check": "single_subject_and_view",
+            "result": "pass",
+            "evidence": "已查看实际图像，独立单角色且视角与登记一致。"
+          },
+          {
+            "check": "major_identity_and_outfit",
+            "result": "pass",
+            "evidence": "短刺发、矩形眼镜（可见时）、粉色圆领卫衣、成人比例与2D风格延续父参考。"
+          },
+          {
+            "check": "requested_native_dimensions",
+            "result": "fail",
+            "evidence": "实际1024×1536低于生成提示目标，未插值放大。"
+          },
+          {
+            "check": "fine_shoe_artwork",
+            "result": "not_run",
+            "evidence": "本图未完成鞋子近景字样与左右脚映射验收；面部图无鞋子。"
+          }
+        ],
+        "video_test_status": "not_run"
+      },
+      "notes": [
+        "整体身份、单人正面与完整头脚已查看；左腕手表作为候选版本细节。",
+        "鞋小字并非精确文字资产；未完成左右脚映射。",
+        "实际原生1024×1536；没有插值放大，未达到生成提示中的更高尺寸目标。"
+      ],
+      "sha256": "be9c1daa45254e5af476a82640bf42ace3328626c8eda71672497b082ee24b29",
+      "width": 1024,
+      "height": 1536,
+      "color_mode": "RGB",
+      "bytes": 1252673
+    },
+    {
+      "id": "master-profile-candidate",
+      "path": "assets/character-reference/video-v2-candidates/bitdong-profile-right.png",
+      "role": "character_master",
+      "status": "candidate",
+      "set_id": "bitdong-v2-candidate-20261030",
+      "single_subject": true,
+      "view": "profile_facing_screen_right",
+      "provenance": {
+        "kind": "generated",
+        "tool": "built_in_image_gen",
+        "created_at": "2026-10-30",
+        "source_asset_ids": [
+          "master-front-candidate",
+          "source-shoe-board"
+        ],
+        "prompt_path": "assets/character-reference/video-v2-candidates/bitdong-profile-right.prompt.txt",
+        "approved_by": null,
+        "approved_at": null
+      },
+      "visual_review": {
+        "reviewed_by": "assistant",
+        "reviewed_at": "2026-10-30",
+        "scope": "static_image_only",
+        "checks": [
+          {
+            "check": "single_subject_and_view",
+            "result": "pass",
+            "evidence": "已查看实际图像，独立单角色且视角与登记一致。"
+          },
+          {
+            "check": "major_identity_and_outfit",
+            "result": "pass",
+            "evidence": "短刺发、矩形眼镜（可见时）、粉色圆领卫衣、成人比例与2D风格延续父参考。"
+          },
+          {
+            "check": "requested_native_dimensions",
+            "result": "fail",
+            "evidence": "实际1024×1536低于生成提示目标，未插值放大。"
+          },
+          {
+            "check": "fine_shoe_artwork",
+            "result": "fail",
+            "evidence": "鞋子局部字样或图案仍有差异，详见notes。"
+          }
+        ],
+        "video_test_status": "not_run"
+      },
+      "notes": [
+        "真正90度侧面已查看；远侧左腕手表可被遮挡。",
+        "侧脸及眼镜腿为候选推断；蓝色侧纹与正面处理仍有差异。",
+        "实际原生1024×1536；没有插值放大，未达到生成提示中的更高尺寸目标。"
+      ],
+      "sha256": "8356b13b82be09e38e9ba4c48a475701796e531047c04e13bbba55a252b1d1f6",
+      "width": 1024,
+      "height": 1536,
+      "color_mode": "RGB",
+      "bytes": 1550241
+    },
+    {
+      "id": "master-three-quarter-candidate",
+      "path": "assets/character-reference/video-v2-candidates/bitdong-three-quarter.png",
+      "role": "character_master",
+      "status": "candidate",
+      "set_id": "bitdong-v2-candidate-20261030",
+      "single_subject": true,
+      "view": "three_quarter_screen_right",
+      "provenance": {
+        "kind": "generated",
+        "tool": "built_in_image_gen",
+        "created_at": "2026-10-30",
+        "source_asset_ids": [
+          "master-front-candidate"
+        ],
+        "prompt_path": "assets/character-reference/video-v2-candidates/bitdong-three-quarter.prompt.txt",
+        "approved_by": null,
+        "approved_at": null
+      },
+      "visual_review": {
+        "reviewed_by": "assistant",
+        "reviewed_at": "2026-10-30",
+        "scope": "static_image_only",
+        "checks": [
+          {
+            "check": "single_subject_and_view",
+            "result": "pass",
+            "evidence": "已查看实际图像，独立单角色且视角与登记一致。"
+          },
+          {
+            "check": "major_identity_and_outfit",
+            "result": "pass",
+            "evidence": "短刺发、矩形眼镜（可见时）、粉色圆领卫衣、成人比例与2D风格延续父参考。"
+          },
+          {
+            "check": "requested_native_dimensions",
+            "result": "fail",
+            "evidence": "实际1024×1536低于生成提示目标，未插值放大。"
+          },
+          {
+            "check": "fine_shoe_artwork",
+            "result": "fail",
+            "evidence": "鞋子局部字样或图案仍有差异，详见notes。"
+          }
+        ],
+        "video_test_status": "not_run"
+      },
+      "notes": [
+        "视角与主要身份特征已查看。",
+        "鞋帮字样不清，黄橙侧后图案简化，精细图案待统一。",
+        "实际原生1024×1536；没有插值放大，未达到生成提示中的更高尺寸目标。"
+      ],
+      "sha256": "3af4f8156c8190594500b49a720c261332c8d80429c53559d628fe01b2050832",
+      "width": 1024,
+      "height": 1536,
+      "color_mode": "RGB",
+      "bytes": 1613214
+    },
+    {
+      "id": "archive-example-01-two-breakpoints",
+      "path": "assets/examples/01-two-breakpoints.png",
+      "role": "style_example",
+      "status": "archived",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "含旧角色的插画风格案例，默认归档，不作Bit东身份或视频输入。"
+      ],
+      "sha256": "cce4bd8d555796063305642714c67bab0f37cd3ff9cee0da9d18bd6187cf4397",
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "bytes": 807090
+    },
+    {
+      "id": "archive-example-02-minimum-loop",
+      "path": "assets/examples/02-minimum-loop.png",
+      "role": "style_example",
+      "status": "archived",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "含旧角色的插画风格案例，默认归档，不作Bit东身份或视频输入。"
+      ],
+      "sha256": "586bc88af928ca57fcd43c17f4e4566ee891967fb9a4ff5ed0e2455078618029",
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "bytes": 952871
+    },
+    {
+      "id": "archive-example-03-sort-by-purpose",
+      "path": "assets/examples/03-sort-by-purpose.png",
+      "role": "style_example",
+      "status": "archived",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "含旧角色的插画风格案例，默认归档，不作Bit东身份或视频输入。"
+      ],
+      "sha256": "e23e7974b03d9540662728cc343d57aec8339c37db8ca0eae922e4f0cfdd8980",
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "bytes": 869435
+    },
+    {
+      "id": "archive-example-04-one-fish-many-uses",
+      "path": "assets/examples/04-one-fish-many-uses.png",
+      "role": "style_example",
+      "status": "archived",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "含旧角色的插画风格案例，默认归档，不作Bit东身份或视频输入。"
+      ],
+      "sha256": "ffb6abeb4e5361ffec6a3cecd40fff122c5f99008e9b2b45e2b83f5c04206ac1",
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "bytes": 1121158
+    },
+    {
+      "id": "archive-example-05-handoff-path",
+      "path": "assets/examples/05-handoff-path.png",
+      "role": "style_example",
+      "status": "archived",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "含旧角色的插画风格案例，默认归档，不作Bit东身份或视频输入。"
+      ],
+      "sha256": "2c4ed6f85c1381b0c9723d21ae3dca4059135c00d3a09b0ed8502a81134ca39e",
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "bytes": 740706
+    },
+    {
+      "id": "archive-example-06-three-sources",
+      "path": "assets/examples/06-three-sources.png",
+      "role": "style_example",
+      "status": "archived",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "含旧角色的插画风格案例，默认归档，不作Bit东身份或视频输入。"
+      ],
+      "sha256": "70a13265b34685ad418676611b68a3ef2fd16b10aaaf8b1152b7ad347eded674",
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "bytes": 1036312
+    },
+    {
+      "id": "archive-example-07-three-content-jobs",
+      "path": "assets/examples/07-three-content-jobs.png",
+      "role": "style_example",
+      "status": "archived",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "含旧角色的插画风格案例，默认归档，不作Bit东身份或视频输入。"
+      ],
+      "sha256": "429b319c459220def8777e0481e52ac2d8b0026dda3066436c7843b2f178d5cb",
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "bytes": 942378
+    },
+    {
+      "id": "archive-example-08-handoff-copy-toolbox",
+      "path": "assets/examples/08-handoff-copy-toolbox.png",
+      "role": "style_example",
+      "status": "archived",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "含旧角色的插画风格案例，默认归档，不作Bit东身份或视频输入。"
+      ],
+      "sha256": "c92342daed9af66c7bdbd82da3483b835f21ba19c64d8864b4793ef5ae8ee573",
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "bytes": 924354
+    },
+    {
+      "id": "archive-example-09-common-pits-no-title",
+      "path": "assets/examples/09-common-pits-no-title.png",
+      "role": "style_example",
+      "status": "archived",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "含旧角色的插画风格案例，默认归档，不作Bit东身份或视频输入。"
+      ],
+      "sha256": "b14ca58c823e54fa08b4db310cdac19f133d86ae006708527f4b19417391e7f1",
+      "width": 1672,
+      "height": 940,
+      "color_mode": "RGB",
+      "bytes": 1160863
+    },
+    {
+      "id": "archive-example-10-information-well",
+      "path": "assets/examples/10-information-well.png",
+      "role": "style_example",
+      "status": "archived",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "含旧角色的插画风格案例，默认归档，不作Bit东身份或视频输入。"
+      ],
+      "sha256": "d36df9a941fe071814ad1e08cdb6131d6e8d840ee655ac04732735dcf8721ccf",
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "bytes": 1075561
+    },
+    {
+      "id": "archive-example-11-idea-press",
+      "path": "assets/examples/11-idea-press.png",
+      "role": "style_example",
+      "status": "archived",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "含旧角色的插画风格案例，默认归档，不作Bit东身份或视频输入。"
+      ],
+      "sha256": "cded74b04e9225141c394ae9386caff4c3f7f533a51a41c9842999cab83a18ee",
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "bytes": 937104
+    },
+    {
+      "id": "archive-example-12-content-fermentation",
+      "path": "assets/examples/12-content-fermentation.png",
+      "role": "style_example",
+      "status": "archived",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "含旧角色的插画风格案例，默认归档，不作Bit东身份或视频输入。"
+      ],
+      "sha256": "929d4f2fde6938abdab4a5b20a010578389bd59bf0d6fa32daf6611a898b4c32",
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "bytes": 915474
+    },
+    {
+      "id": "archive-example-13-system-bearing",
+      "path": "assets/examples/13-system-bearing.png",
+      "role": "style_example",
+      "status": "archived",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "含旧角色的插画风格案例，默认归档，不作Bit东身份或视频输入。"
+      ],
+      "sha256": "bcd26b1f34e5c8d220e2180618ffed448455faebfe32ff9e0904ad33a1ab8603",
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "bytes": 936889
+    },
+    {
+      "id": "archive-example-14-trust-bridge",
+      "path": "assets/examples/14-trust-bridge.png",
+      "role": "style_example",
+      "status": "archived",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "含旧角色的插画风格案例，默认归档，不作Bit东身份或视频输入。"
+      ],
+      "sha256": "381194efc7d3fd6a9c7db9d6d3cf361ae3508aa6614727e0b0615d9f83afe522",
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "bytes": 1164218
+    }
+  ]
+}

@@ -1,164 +1,161 @@
-# Bit东插画 Skill
+# BIT东 · IP角色与视频 Skill
 
-为中文文章、帖子、博客和 Notion 文档设计并生成以 **Bit东** 为固定视觉主体的 16:9 横版正文插画。
+将 Bit东 的个人动漫形象整理为可复用的角色规范、独立参考图与视频制作流程，支持角色定板、分镜、图生视频和跨平台移交。保留原来的文章插画能力。
 
-![Bit东角色设定](assets/character-reference/bitdong-character-sheet.png)
+**Skill工作流版本：2.0。技术名仍为 `bitdong-illustrations`，原调用方式继续有效。**
 
-## 能做什么
+## 先看当前状态
 
-- 阅读中文正文并提炼适合配图的认知节点
-- 先输出 1–9 张图的配图策略与 shot list
-- 直接生成成熟动漫风、清爽怪诞的正文插画
-- 保持 Bit东的脸部、服饰、情绪、动作和定制鞋一致
-- 根据叙事选择工作情绪、社交情绪和身体语言参考
-- 检查并修正角色失真、画面过满、PPT 感、中文错字等问题
+- 既有角色设计沿用仓库原版：短刺黑发、矩形黑框眼镜、粉色圆领无帽卫衣、银链、炭黑长裤、定制黑色高帮鞋。
+- 新增5张独立角色参考**候选图**，没有将未经用户选定的外观冒充最终定稿。
+- 提供可灵、即梦/Seedance、Runway与Google Veo的流程适配及官方来源；参数必须按实际型号与网页/API入口核验。
+- 提供可运行的素材校验和打包工具；**没有内置视频API调用，也没有声称完成跨模型视频实拍验证。**
 
-## 环境要求
+这个Skill由支持Skills的助手读取，负责准备角色、镜头与素材。视频平台实际接收的是图片、提示词和其支持的参数；无需假设视频模型能直接读取 `SKILL.md`。
 
-- 支持 Skills 的 Codex 环境
-- 可调用 `image_gen` 的图片生成能力
-- Node.js 与 npm（仅使用 `npx` 安装时需要）
-- Git（仅手动安装或更新时需要）
+## 相比原版改变了什么
 
-## 安装
+| 原版 | 当前工作流 |
+| --- | --- |
+| 以16:9白底文章配图为中心 | 视频、角色定板为主，文章插画作为保留模式 |
+| 每次混合照片、角色拼板和表情表 | 固定动画版本，按用途选最少必要参考 |
+| 来源图与“最终母版”界限不清 | 登记source / candidate / approved / archived |
+| 参考文件只有路径 | 记录ID、真实尺寸、哈希、来源、职责与缺陷 |
+| 缺少镜头状态交接 | 每镜头记录起终状态、持物手、手表、方向和光线 |
+| 一套长提示词 | 按主体参考、首帧、首尾帧分别输出中英文提示 |
+| 依靠人工找文件 | 校验并导出原图、上传顺序、逐镜头提示与记录 |
 
-### 方法一：使用 npx skills（推荐）
+## 独立角色参考
 
-需要已安装 Node.js 和 npm。为 Codex 全局、非交互安装：
+以下为待选定的候选套装，不是已验收母版。原始图片未插值放大，生成提示与来源保留在同目录。
+
+| 参考 | 文件 | 原生尺寸 |
+| --- | --- | --- |
+| 正面全身 | [bitdong-front.png](assets/character-reference/video-v2-candidates/bitdong-front.png) | 1024×1536 |
+| 三分之四全身 | [bitdong-three-quarter.png](assets/character-reference/video-v2-candidates/bitdong-three-quarter.png) | 1024×1536 |
+| 朝画面右侧90°侧面 | [bitdong-profile-right.png](assets/character-reference/video-v2-candidates/bitdong-profile-right.png) | 1024×1536 |
+| 正背面 | [bitdong-back.png](assets/character-reference/video-v2-candidates/bitdong-back.png) | 1024×1536 |
+| 正面面部近景 | [bitdong-face-front.png](assets/character-reference/video-v2-candidates/bitdong-face-front.png) | 1254×1254 |
+
+<img src="assets/character-reference/video-v2-candidates/bitdong-front.png" alt="Bit东正面角色候选" width="240">
+
+五张图可以用于外观审阅和明确标注的生成草案。鞋子精细图案/字样仍需统一；背面结构和左腕手表为候选版本细节；BIT/DONG左右脚映射尚未确定。详细问题见 [素材登记表](assets/asset-manifest.json) 和 [母版制作规范](references/character-sheet-production.md)。不把这些图称为4K或完整360°资产。
+
+## 使用示例
+
+### 用现有IP设计视频
+
+```text
+使用 $bitdong-illustrations，沿用当前Bit东的外观，
+为可灵设计一条15秒、9:16的个人IP介绍视频。
+先给我镜头方案、每段参考素材和可粘贴提示词，
+同一人物和服装贯穿全片；明确哪些素材还没定稿。
+```
+
+### 对接即梦或其他平台
+
+```text
+用Bit东角色做一条工作室口播短片，我在即梦网页端操作。
+给我每个镜头需要上传的图、上传顺序、中文提示词和连续性记录。
+不清楚当前界面支持的参数就标出来，不要虚构API字段。
+```
+
+### 制作和选定角色母版
+
+```text
+使用 $bitdong-illustrations，检查这套Bit东候选角色板，
+保留脸型、矩形眼镜和服装，只统一定制鞋的细节。
+每个角度独立输出，列出变化和待验收项。
+```
+
+用户选定实际文件后，记录批准依据与哈希，再冻结为当前母版。普通后续镜头沿用该版本，不重复确认角色。
+
+### 保留原文章配图
+
+```text
+使用 $bitdong-illustrations，为下面文章生成3张16:9白底正文插画：
+<文章>
+```
+
+## 安装与更新
+
+使用 [skills CLI](https://github.com/vercel-labs/skills) 安装到支持的助手。沿用原有技能名：
 
 ```bash
-npx skills add grennd-hand/bit-dong \
-  --skill bitdong-illustrations \
-  -g \
-  -a codex \
-  -y
+npx skills add grennd-hand/bit-dong --skill bitdong-illustrations -g -a codex -y
 ```
 
-如果希望交互选择目标 AI 和安装范围：
+也可以手动克隆到你的助手技能目录；以Codex为例：
 
 ```bash
-npx skills add grennd-hand/bit-dong
+git clone https://github.com/grennd-hand/bit-dong.git "$HOME/.codex/skills/bitdong-illustrations"
 ```
 
-这里运行的是通用 [skills CLI](https://github.com/vercel-labs/skills)；本仓库不需要发布为 npm 包。安装器会从 GitHub 下载 Skill，并放入所选 AI 的技能目录。
+若已有Git安装，先保留自己的修改，再在该目录执行 `git pull --ff-only`。通过其他安装器安装的副本不会自动随仓库更新，请按该安装器的更新方式处理，避免重复安装两个版本。这里不附带任何平台密钥或视频生成额度。
 
-### 方法二：让 Codex 自动安装
+## 校验并导出示例包
 
-在 Codex 中发送：
+仅需Python 3.9及以上，无第三方Python依赖。示例是一条分为两个镜头的10秒问候策划，尚未生成视频；其中每段5秒是策划值，需要按目标平台重查。
 
-```text
-请使用 $skill-installer 从 https://github.com/grennd-hand/bit-dong 安装 bitdong-illustrations Skill。
-```
-
-安装完成后，在下一轮对话中即可使用。
-
-### 方法三：使用 Skill Installer 脚本
-
-macOS / Linux：
+在仓库根目录执行：
 
 ```bash
-python "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
-  --repo grennd-hand/bit-dong \
-  --path . \
-  --name bitdong-illustrations
+python3 scripts/prepare_video_pack.py \
+  --plan templates/shot-plan.example.json \
+  --out /tmp/bitdong-video-draft \
+  --allow-draft
 ```
 
-Windows PowerShell：
+输出包含：
 
-```powershell
-python "$HOME\.codex\skills\.system\skill-installer\scripts\install-skill-from-github.py" `
-  --repo grennd-hand/bit-dong `
-  --path . `
-  --name bitdong-illustrations
+- 所选参考图片的原始字节副本。
+- 每个镜头的 `prompt.zh.txt`、`prompt.en.txt`、`shot.json` 和 `upload-map.json`。
+- 整体 `pack.json` 与使用说明，保留角色版本、输入模式及未核验事项。
+- 平台引用名称初始为 `null`；上传后填写真实标签，不把本地ID当平台ID。
+
+默认不带 `--allow-draft` 时，必须提供已批准的同版素材和完整的平台记录；当前候选示例会被正确拒绝。工具不会因为 `--allow-draft` 就允许旧拼图/真人来源/归档图充当视频输入。输出目录非空时拒绝覆盖。
+
+模板见 [shot-plan.example.json](templates/shot-plan.example.json)。用 [quality-review.example.json](templates/quality-review.example.json) 分开记录结构检查、图片检查和视频检查。工具检查记录是否完整，不替你验证平台真实可用性或视觉相似度。
+
+## 流程
+
+```mermaid
+flowchart TD
+    A["Bit东角色规范与同版素材"] --> B{"目标输入模式"}
+    B -->|"主体参考"| C["独立角色图与职责映射"]
+    B -->|"首帧或首尾帧"| D["制作并检查场景帧"]
+    C --> E["按实际模型适配提示与参数"]
+    D --> E
+    E --> F["平台生成视频"]
+    F --> G{"身份与连续性验收"}
+    G -->|"通过"| H["交付并继承结束状态"]
+    G -->|"存在漂移"| I["回到母版修失败镜头"]
+    I --> D
 ```
 
-### 方法四：使用 Git 手动安装
+## 文件入口
 
-macOS / Linux：
+| 文件 | 用途 |
+| --- | --- |
+| [SKILL.md](SKILL.md) | 助手执行入口与任务路由 |
+| [character-canon.json](references/character-canon.json) | 角色版本、恒定项和批准套装 |
+| [bitdong-character.md](references/bitdong-character.md) | 视觉规范与冲突处理 |
+| [asset-manifest.json](assets/asset-manifest.json) | 全部素材的状态、来源、尺寸与哈希 |
+| [video-workflow.md](references/video-workflow.md) | 分镜、首帧、连续性和返工 |
+| [model-adapters.md](references/model-adapters.md) | 各平台入口差异与官方来源 |
+| [prompt-template.md](references/prompt-template.md) | 六类中英文提示模板 |
+| [prepare_video_pack.py](scripts/prepare_video_pack.py) | 结构校验与原图打包 |
+
+## 验证范围
+
+运行工具的测试：
 
 ```bash
-git clone https://github.com/grennd-hand/bit-dong.git \
-  "$HOME/.codex/skills/bitdong-illustrations"
+python3 -B -m unittest discover -s tests -p 'test_prepare_video_pack.py' -v
 ```
 
-Windows PowerShell：
+这些检查覆盖版本与输入模式、文件哈希/尺寸、目录范围、未经批准素材、连续性、原图复制及UTF-8交付等。它们不调用视频模型，也不证明视频角色已完全一致。实际平台视频验收应使用真实生成结果。
 
-```powershell
-git clone https://github.com/grennd-hand/bit-dong.git `
-  "$HOME\.codex\skills\bitdong-illustrations"
-```
+## 许可
 
-如果目标目录已经存在，请先更新现有安装，不要重复克隆。安装或更新后，重新打开 Codex 或在下一轮对话中调用该 Skill。
-
-## 使用方法
-
-### 直接生成文章配图
-
-```text
-使用 $bitdong-illustrations，为这篇中文文章设计并生成 5 张正文配图：
-
-<粘贴文章正文>
-```
-
-### 只要配图方案，不立即生成
-
-```text
-用 Bit东插画分析这篇文章应该在哪里配图。先输出 shot list，不要生成图片。
-```
-
-### 指定数量与重点
-
-```text
-使用 $bitdong-illustrations 生成 3 张 16:9 插画，重点表现“卡住、顿悟、形成闭环”三个节点。
-```
-
-### 修改已有图片
-
-```text
-用 Bit东插画修改这张图：保留构图，让 Bit东更成熟，表情改成轻度怀疑，并修正鞋子的 BIT / DONG 图案。
-```
-
-## 默认视觉规则
-
-- 画布：16:9 横版正文配图
-- 背景：干净纯白，大量留白
-- 角色：成年中国男性动漫角色 Bit东
-- 身份锚点：短刺黑发、深色矩形眼镜、粉色卫衣、银色链条、定制黑色高帮鞋
-- 画风：利落现代动漫墨线、克制赛璐璐明暗、少量中文手写批注
-- 禁止：Q 版、萌系、未成年感、商业 PPT 风、复杂架构图、小黑实心怪物或无关吉祥物
-
-完整工作流与约束见 [SKILL.md](SKILL.md)。
-
-## 仓库结构
-
-```text
-bit-dong/
-├── SKILL.md                         # Skill 主指令
-├── agents/openai.yaml               # Codex 展示名称与默认提示词
-├── references/                      # 角色、情绪、构图、提示词和质检规则
-└── assets/
-    ├── character-reference/         # Bit东身份、造型、表情、姿态与鞋子参考
-    └── examples/                    # 旧风格案例，仅用于理解密度与留白
-```
-
-## 更新
-
-Git 安装方式可以在 Skill 目录中执行：
-
-```bash
-git pull --ff-only
-```
-
-使用安装器安装时，如果目标目录已经存在，安装器会停止以保护本地内容。需要更新时，建议使用 Git 安装方式，或先自行备份已有目录。
-
-## 使用注意
-
-- 每次生图都应加载身份、动漫造型和鞋子三类固定参考。
-- 情绪参考按场景选择一张，避免同时塞入所有参考图。
-- `assets/examples/` 中包含旧风格案例，不能作为角色身份参考，也不要照抄构图。
-- 角色必须参与画面的核心动作，不能只是站在旁边作为装饰。
-- 一张图只表达一个核心结构，避免做成说明书或流程图。
-
-## 许可说明
-
-本仓库目前未附带开源许可证。公开可见不代表自动授权商用、修改或再分发；如需超出个人测试范围使用，请先联系仓库所有者取得许可。
+保留原仓库未附带开源许可证的状态。本次修改未扩大角色、照片或其他素材的授权范围。
