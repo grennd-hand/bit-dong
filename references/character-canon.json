@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "character_id": "bitdong",
+  "display_name": "Bit东 / BIT东",
+  "english_name": "Bit Dong",
+  "design_version": "1.0-inherited",
+  "release_status": "inherited_design_with_candidate_video_masters",
+  "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6",
+  "approved_master_set": null,
+  "candidate_master_set": "bitdong-v2-candidate-20261030",
+  "locked_attributes": {
+    "identity": "Adult Chinese male; angular oval face matching the selected animated master.",
+    "hair": "Short spiky black hair, tapered sides, stable hairline and silhouette.",
+    "eyes": "Natural adult-sized eyes; normal blinking and gaze changes are allowed.",
+    "glasses": "Dark thick rectangular frames with clear lenses; stable bridge and temples.",
+    "top": "Plain coral-pink crewneck sweatshirt, no hood, no added chest emblem.",
+    "necklace": "One simple silver chain.",
+    "trousers": "Charcoal relaxed full-length trousers.",
+    "footwear": "Customized black high-top sneakers, cream midsoles, black outsoles, blue side accents and red-pink toe details.",
+    "rendering": "Mature clean 2D anime ink with restrained 1-2 level cel shading.",
+    "proportions": "Natural adult proportions, approximately 7-7.5 heads tall; compare silhouettes visually."
+  },
+  "continuity_choices": {
+    "watch": {
+      "candidate_choice": "dark watch on the character's left wrist",
+      "approval_status": "pending",
+      "rule": "Choose once per version/continuous scene; do not swap wrists or pop in and out."
+    },
+    "shoe_lettering": {
+      "shoe_A": "BIT",
+      "shoe_B": "DONG",
+      "character_left_foot": null,
+      "character_right_foot": null,
+      "rule": "Verify anatomical left/right against original shoe photos before a lettering close-up; do not infer from screen-left."
+    }
+  },
+  "allowed_changes": [
+    "eyebrows",
+    "eyelids",
+    "gaze",
+    "mouth shape",
+    "emotion",
+    "pose",
+    "gesture",
+    "camera",
+    "scene",
+    "lighting"
+  ],
+  "reference_policy": {
+    "portrait": "Identity origin only; consult when establishing or revising the animated design.",
+    "legacy_character_sheet": "Inherited design source, not a single-subject video frame.",
+    "shoe_photos": "Shoe detail only; never transfer background or photographic rendering.",
+    "expression_and_pose_sheets": "Performance only; cannot redefine geometry or outfit.",
+    "candidate_masters": "Review and draft generation only until actually selected.",
+    "archived_assets": "Exclude from automatic selection."
+  },
+  "approval_policy": {
+    "required_record": [
+      "approved_master_set",
+      "asset status=approved",
+      "provenance.approved_by",
+      "provenance.approved_at",
+      "file sha256"
+    ],
+    "notes": "Record the user's actual selection or documented approval. Do not fabricate approval from script validation."
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0",
+  "project": "bitdong-greeting-example",
+  "character_id": "bitdong",
+  "design_version": "1.0-inherited",
+  "provider": "generic",
+  "provider_surface": "unspecified",
+  "model": null,
+  "capabilities_verified_at": null,
+  "official_sources": [],
+  "aspect_ratio": "9:16",
+  "resolution": null,
+  "negative_prompt_supported": null,
+  "planning_note": "10秒问候仅为结构示例。每段5秒是策划值，不表示任何平台支持；未生成视频，候选图尚未最终验收。需用目标平台真实上传标签替换通用引用表述。",
+  "shots": [
+    {
+      "id": "s01",
+      "duration_seconds": 5,
+      "mode": "subject_reference",
+      "reference_ids": [
+        "master-front-candidate",
+        "master-face-candidate"
+      ],
+      "first_frame_id": null,
+      "last_frame_id": null,
+      "scene": "极简2D工作室，均匀柔和光线",
+      "shot_size": "medium",
+      "camera": "slow_push_in",
+      "prompt_zh": "以第一张上传图确定Bit东全身造型和服装，第二张图补充同一人物的面部与矩形眼镜。极简2D工作室中，Bit东面向镜头，双手自然下垂。他露出克制自信的微笑，抬起右手打招呼，最后保持抬手姿势。镜头缓慢推进。眼镜自然贴合面部，左腕深色手表与银链保持一致。",
+      "prompt_en": "Use the first uploaded image for Bit Dong's character design and outfit, and the second for the same character's face and rectangular glasses. In a minimal 2D studio, he faces the camera with his hands relaxed at his sides. He gives a small, confident smile and raises his right hand in greeting, ending with the hand raised. The camera slowly moves closer. His glasses stay fitted to his face, with the same dark watch on his left wrist and a single silver chain.",
+      "negative_prompt": null,
+      "dialogue_zh": null,
+      "continuity_in": {
+        "outfit": "pink crewneck sweatshirt; charcoal trousers; custom black high-tops",
+        "watch": "character_left_wrist_dark_watch",
+        "necklace": "one_silver_chain",
+        "prop": "none",
+        "right_hand": "relaxed_down",
+        "facing": "toward_camera",
+        "location": "minimal_2d_studio",
+        "lighting": "soft_even_front_light"
+      },
+      "continuity_out": {
+        "outfit": "pink crewneck sweatshirt; charcoal trousers; custom black high-tops",
+        "watch": "character_left_wrist_dark_watch",
+        "necklace": "one_silver_chain",
+        "prop": "none",
+        "right_hand": "raised_in_greeting",
+        "facing": "toward_camera",
+        "location": "minimal_2d_studio",
+        "lighting": "soft_even_front_light"
+      },
+      "explicit_cut": false
+    },
+    {
+      "id": "s02",
+      "duration_seconds": 5,
+      "mode": "subject_reference",
+      "reference_ids": [
+        "master-front-candidate",
+        "master-face-candidate"
+      ],
+      "first_frame_id": null,
+      "last_frame_id": null,
+      "scene": "同一极简2D工作室，继承柔和正面光",
+      "shot_size": "medium_close_up",
+      "camera": "locked",
+      "prompt_zh": "沿用同一组上传图中的Bit东，保持同一张脸、矩形眼镜、服装、左腕手表与银链。继续上一镜头的问候动作，右手从抬起状态自然放下，再轻轻点头，最后保持平静微笑。中近景，镜头固定，延续同一工作室与柔和正面光。",
+      "prompt_en": "Use the same uploaded Bit Dong references, keeping the same face, rectangular glasses, outfit, left-wrist watch, and silver chain. Continuing the greeting, he lowers his raised right hand naturally, gives a small nod, and settles into a relaxed smile. Medium close-up with a locked camera, in the same studio and soft frontal light.",
+      "negative_prompt": null,
+      "dialogue_zh": null,
+      "continuity_in": {
+        "outfit": "pink crewneck sweatshirt; charcoal trousers; custom black high-tops",
+        "watch": "character_left_wrist_dark_watch",
+        "necklace": "one_silver_chain",
+        "prop": "none",
+        "right_hand": "raised_in_greeting",
+        "facing": "toward_camera",
+        "location": "minimal_2d_studio",
+        "lighting": "soft_even_front_light"
+      },
+      "continuity_out": {
+        "outfit": "pink crewneck sweatshirt; charcoal trousers; custom black high-tops",
+        "watch": "character_left_wrist_dark_watch",
+        "necklace": "one_silver_chain",
+        "prop": "none",
+        "right_hand": "relaxed_down",
+        "facing": "toward_camera",
+        "location": "minimal_2d_studio",
+        "lighting": "soft_even_front_light"
+      },
+      "explicit_cut": false
+    }
+  ]
+}

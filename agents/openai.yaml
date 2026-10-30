@@ -1,4 +1,4 @@
 interface:
-  display_name: "Bit东插画"
-  short_description: "以 Bit东成熟动漫角色生成怪诞清爽的中文正文配图"
-  default_prompt: "Use $bitdong-illustrations to 为这篇中文文章设计并生成几张成熟动漫风的 Bit东插画。"
+  display_name: "Bit东 IP · 角色与视频"
+  short_description: "锁定Bit东动漫角色，制作独立母版、连续分镜与跨视频模型素材包"
+  default_prompt: "使用 $bitdong-illustrations，以当前Bit东角色版本制作连续视频分镜、参考素材与目标模型的中英文提示词。"

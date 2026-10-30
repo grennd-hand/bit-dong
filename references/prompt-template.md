@@ -1,86 +1,93 @@
-# 生图提示词模板
+# Bit东｜图像与视频提示词模板
 
-每张图单独生成。根据正文内容替换变量，不要把多张图拼在一起。
+先读 `character-canon.json`、`bitdong-character.md` 和 `../assets/asset-manifest.json`；按登记状态选择当前动画母版，未通过定稿验收的参考不得宣称已定稿。只选本镜头需要的参考，不再默认同时上传真人照片、角色拼板、鞋板及多张情绪表。
 
-每次调用前，固定加载身份、角色设计与鞋子三个参考：
+上传前查看图片；上传后把下列花括号替换成实际素材标签和镜头内容。标签必须对应真实上传文件，不能凭空写一个平台 ID。单张角色图负责外形，场景图负责构图，动作参考只负责动作；产生冲突时依当前选定动画母版与角色规范处理，不用原照片重新解释脸。
 
+保持固定身份：成年中国男性、短刺黑发、深色粗框矩形眼镜、珊瑚粉圆领卫衣、银链、炭黑长裤、定制黑色高帮鞋。英文使用 **crewneck sweatshirt**。近景无需为了出现鞋子改成全身；可见细节按母版保持，未见部分不得随意设计。
+
+中文与英文是两份等价交付，按平台选择其一。参数在界面或 API 中单独设置，不假设提示中的“4K”“8秒”等文字会设置真实参数。平台适配见 `model-adapters.md`。
+
+## 1. 母版候选 / 镜头首帧图像生成
+
+每次只生成一张独立图片。制作母版候选时选中性表情、清晰轮廓与所需单一视角；制作首帧时直接使用剧情场景和起始动作。只有明确要求对照板时才输出拼板。
+
+**中文**
 ```text
-assets/character-reference/bitdong-portrait.jpg
-assets/character-reference/bitdong-character-sheet.png
-assets/character-reference/shoes/bitdong-shoes-reference-board.jpg
+以{角色参考标签}为Bit东的动画造型基准，生成一张{用途：单视角母版候选/镜头首帧}。保持同一成年男性的脸型、短刺黑发、矩形粗框眼镜、珊瑚粉圆领卫衣、银链、炭黑长裤与定制黑色高帮鞋，以及参考中的成人比例、墨线和赛璐璐明暗。{细节参考标签与职责，仅在需要时填写}。视角与景别：{视角、景别}。场景与光线：{场景、光线}。表情和起始姿态：{表情、姿态}。构图与画幅：{构图、画幅}。呈现单一连贯画面，人物完整保留在所选景别内。
 ```
 
-再根据叙事选择一张情绪表：
-
+**English**
 ```text
-# 工作、风险、卡点、顿悟、结果
-assets/character-reference/bitdong-expression-sheet-v1.png
-
-# 好奇、疲惫、无奈、失望、尴尬、同理、期待、自信
-assets/character-reference/bitdong-social-expression-sheet-v1.png
+Use {character reference label} as Bitdong's animated character design. Create one {single-view master candidate / opening shot frame}. Keep the same adult face, short spiky black hair, dark rectangular glasses, coral-pink crewneck sweatshirt, silver chain, charcoal trousers, and custom black high-top sneakers. Match the reference's adult proportions, ink lines, and cel shading. {Optional detail reference and its role}. View and framing: {view, shot size}. Setting and lighting: {setting, lighting}. Expression and starting pose: {expression, pose}. Composition and aspect ratio: {composition, ratio}. Render one coherent scene with the character framed as specified.
 ```
 
-中景、全身、状态转变、小漫画或身体姿态承担主要意思时，加上：
+## 2. 主体参考生视频
 
+用于确认支持角色/主体参考的入口。明确每张图用途；参考仅定义身份时，不要求照搬其背景或站姿。
+
+**中文**
 ```text
-assets/character-reference/bitdong-body-language-sheet-v1.png
+{角色参考标签}定义同一个Bit东的脸、发型、眼镜、服装、成人比例与动画画风；{其他素材标签及各自职责}。场景：{场景}。Bit东从{起始状态}开始，{一个主要动作及自然次要动作}，最后{结束状态}。情绪由{起始情绪}变为{结束情绪}，眉眼、嘴型和身体重心自然协调。镜头{运镜}，节奏{节奏}。整个镜头保持同一角色设计、眼镜结构、服装与鞋子，光照随环境自然变化。
 ```
 
-原照片是身份和脸部参考；角色卡是动漫造型、服饰、成人比例与渲染参考；所选情绪表是当前情绪范围参考；身体语言表是重心、脊柱、肩胸、步态、手势与空间距离参考；鞋子板是鞋型、定制配色、图案与“BIT / DONG”的权威参考。不要无原因同时加载两张情绪表。
-
+**English**
 ```text
-Generate one standalone 16:9 horizontal Chinese article illustration.
-
-Visual DNA:
-Pure white background. Bit东 is rendered as a polished modern adult anime character with precise expressive ink lines and restrained 1-2 level cel shading. Surrounding objects and conceptual machinery use sparse black hand-drawn line art with slightly imperfect pen lines, so the mature anime character feels inserted into a clean absurd whiteboard world. Lots of empty white space. Sparse red/orange/blue handwritten Chinese annotations. No environmental gradients, realistic cast shadows, paper texture, complex background, commercial vector style, PPT infographic look, cute mascot poster, children's illustration, or realistic UI.
-
-Reference image roles:
-The portrait is the identity and facial reference for Bit东. The modern anime character sheet is the definitive character design, outfit, adult-proportion, ink-line and cel-shading reference. The selected emotion sheet defines the adult emotional range needed by this narrative beat. If supplied, the full-body language sheet defines center of gravity, spine, shoulder/chest openness, stance or gait, hand language and spatial distance. The shoe board is authoritative for his exact customized high-top silhouette, color blocking, handmade markings and split BIT / DONG lettering; never copy its desk, monitor, keyboard, lighting or photo background. Preserve the same recognizable adult Chinese man; do not reproduce the portrait's room, lighting or selfie framing.
-
-Recurring personal character required:
-Bit东, a recognizable polished modern anime adult Chinese man matching all four references. Preserve all five identity anchors in every appearance: short spiky black hair with tapered sides, oversized dark rectangular eyeglasses, a rich muted coral-pink crewneck sweatshirt, a simple silver chain necklace, and his exact personalized black leather high-top sneakers. The shoes have black laces, warm off-white midsoles, thin black outsoles, distressed bright-blue curved side marks, coral-red/pink toe typography and repeating symbols, small purple side marks, yellow-orange cartoon heel drawings, subtle pink piping, and pale-blue hand-drawn BIT / DONG lettering split across the two outer ankle panels. Keep an angular oval face, natural adult-sized eyes, and charcoal relaxed trousers. Use mature natural proportions around 7-7.5 heads tall, precise ink lines, and restrained cel shading. Bit东 must perform the core conceptual action, not decorate the scene. Make his selected adult emotion clearly readable and narratively motivated while keeping him grounded, recognizable, and never cute or generic.
-
-Theme:
-{正文配图主题}
-
-Structure type:
-{结构类型：Workflow / 系统局部 / 前后对比 / 角色状态 / 概念隐喻 / 方法分层 / 地图路线 / 小漫画分镜}
-
-Core idea:
-{这张图要表达的核心意思}
-
-Narrative beat and emotion:
-{情绪类型；强度 0-3；触发原因；眉眼嘴、头部与肩颈的联动。除非画面表达观察或停顿，否则不要使用中性脸}
-
-Body-language direction:
-{重心；脊柱；肩胸开合；站距或步态；手的高度、掌心和离身体距离；人物与目标的空间距离。至少明确四项}
-
-Composition:
-{具体画面：Bit东在哪里、正在做什么、主要物件是什么、信息如何流动}
-
-Suggested elements:
-{元素1} / {元素2} / {元素3} / {元素4}
-
-Chinese handwritten labels:
-{标注词1} / {标注词2} / {标注词3} / {标注词4} / {可选标注词5}
-
-Color use:
-Black for main line art, hair, glasses, objects, and labels. Rich muted coral-pink for Bit东's signature sweatshirt, with one darker pink cel-shadow tone. Charcoal for trousers. Cool gray for restrained character shading and the silver chain. Orange for main flow/path/arrows. Red only for key warnings/problems/results. Blue only for secondary notes or feedback/system state, except the fixed distressed-blue markings on Bit东's shoes. The shoes' small red-pink, purple, blue, and yellow-orange customized markings are identity details and do not count as annotation colors.
-
-Constraints:
-One image explains only one core structure. Keep the main subject around 40%-60% of the canvas. Preserve at least 35% blank white space. Use at most 5-8 short handwritten Chinese labels. Keep Bit东's face, glasses, hair, outfit, customized high-top shoes, adult proportions, and anime rendering visually consistent across all scenes and panels. Make the chosen emotion readable at thumbnail size through coordinated face, center of gravity, spine, shoulder/chest openness, stance or gait, hands and spatial distance; the pose should remain partly readable when the face is covered. Do not change only the mouth or arms, do not reuse a generic upright stance, and do not fall back to calm neutrality unless the narrative calls for it. Whenever the feet are visible, preserve the black high-top silhouette, cream midsoles, blue side accents, red-pink toe markings, and asymmetric handmade character of the shoe pair; in close or full-body views also preserve the BIT / DONG ankle lettering, purple side marks, and yellow-orange heel drawings. Never replace them with generic sneakers or low-tops. Do not transform his body into a machine, funnel, blob, or icon. Do not render him as chibi, moe, a teenager, a school-uniform character, a generic anime pretty boy, a 3D figure, or a traced photo sketch. Do not imitate any named anime character, studio, or artist. Do not include 小黑, a solid-black creature, white-dot-eyed mascot, or any unrelated character. Do not write a title in the top-left corner. Do not write the structure type on the image. Do not make it a formal diagram, course slide, or dense explainer. Do not copy prior examples or reuse known case compositions unless explicitly requested; invent a fresh visual metaphor for this specific article. It should be clear but not instructional, emotionally legible but not theatrical, stylish but not childish, strange but clean.
+{Character reference label} defines the same Bitdong: his face, hair, glasses, clothing, adult proportions, and animation style. {Other reference labels and their roles}. Setting: {setting}. He starts {starting state}, {one main action with natural secondary motion}, and ends {ending state}. His expression shifts from {starting emotion} to {ending emotion}, with coordinated facial movement and body weight. The camera {camera movement}. The pacing is {pacing}. Keep his character design, glasses, outfit, and shoes consistent as the lighting responds naturally to the scene.
 ```
 
-## 图像编辑提示
+## 3. 首帧图生视频：运动提示
 
-去掉左上角标题：
+输入必须是检查通过的单张场景首帧。让首帧承担外形与构图，文字集中写运动；Runway 等要求正向描述的入口优先使用这一简短结构。
 
+**中文**
 ```text
-Edit the provided image. Remove only the handwritten title "{要删除的文字}" and its underline from the top-left corner. Fill that area with the same clean white background, matching the surrounding blank paper. Preserve everything else exactly: characters, labels, paths, line style, composition, aspect ratio, and image quality. Do not add any new text or objects.
+人物{主要动作}，同时{自然次要动作}。镜头{运镜或固定机位}。环境中{必要的环境运动}。动作以{速度与节奏}展开，结束时{最终姿态与停留}。眼镜贴合面部，角色和服装延续首帧的设计。
 ```
 
-增强怪诞感：
-
+**English**
 ```text
-Regenerate this illustration with the same core meaning and simple layout, but make Bit东 more central to the conceptual action. Match the supplied definitive anime character sheet, selected adult emotion sheet, optional body-language sheet, and shoe reference board: preserve his recognizable short spiky black hair, dark rectangular glasses, coral-pink crewneck sweatshirt, silver chain, charcoal trousers, personalized black high-top shoes with cream midsoles, blue side accents, red-pink toe markings and BIT / DONG ankle lettering, mature 7-7.5-head proportions, precise ink lines, and restrained cel shading. Give him {情绪类型与强度} because {触发原因}; express it through coordinated eyebrows, eyelids, gaze, mouth, jaw, head angle, center of gravity, spine, shoulder/chest openness, stance or gait, hands and spatial distance rather than changing only the mouth or arms. Bit东 should be doing the strange work that explains the idea, not standing beside the diagram. Remove any solid-black creature or unrelated mascot. Keep the surrounding scene clean, sparse, hand-drawn, emotionally legible, and never chibi or cute.
+The character {main action} while {natural secondary motion}. The camera {camera movement or locked framing}. {Necessary environmental motion}. The movement unfolds at {pace}, ending with {final pose and hold}. His glasses stay fitted to his face, and his design and clothing remain consistent with the opening frame.
+```
+
+## 4. 首尾帧过渡
+
+先确认两帧为同一角色版本、同一服装和可连续的空间；若不匹配，修正帧后再生成。使用当前入口真实首帧/尾帧字段，不把两张图都当普通角色参考。
+
+**中文**
+```text
+从已指定首帧过渡到已指定尾帧。Bit东通过{可执行的动作路径}到达尾帧的姿态和位置；人物、服装、道具与空间连续。镜头{连续运镜}，动作{节奏}，结尾{停留方式}。以自然身体运动完成过渡，保持脸、眼镜和四肢结构稳定。
+```
+
+**English**
+```text
+Move continuously from the designated first frame to the designated last frame. Bitdong {physically plausible action path}, arriving at the pose and position shown in the final frame. Keep the character, clothing, props, and spatial layout continuous. The camera {continuous camera movement}. The action proceeds at {pace}, ending with {final hold}. Use natural body movement throughout, preserving his face, glasses, and anatomy.
+```
+
+## 5. 局部修复：先修帧，再重跑受影响镜头
+
+输入待修图片及最相关母版/细节参考。一次明确一个问题和可修改区域；静帧修复不等于整段视频已修复。眼镜遮挡眼部时保留正确遮挡，不添加透过镜框的重复眼睛。
+
+**中文**
+```text
+编辑{待修图片}，只修正{区域}的{具体错误}，以{当前动画母版或细节参考}为准。将该区域恢复为{准确目标，例如双眼视线一致、镜框完整且贴合脸部}。保持其他面部特征、表情、头部角度、身体、服装、背景、光线、构图和画幅不变。匹配原图的墨线与赛璐璐明暗，边缘自然衔接。
+```
+
+**English**
+```text
+Edit {image to repair}. Correct only {specific error} within {area}, using {current animation master or detail reference}. Restore {precise target, such as aligned gaze and intact glasses fitted to the face}. Preserve the other facial features, expression, head angle, body, clothing, background, lighting, composition, and aspect ratio. Match the original ink lines and cel shading, with clean, seamless edges.
+```
+
+## 6. 旧插画模式：中文文章正文配图
+
+仅本模式读取 `style-dna.md`、`composition-patterns.md`；白底、16:9、批注和怪诞隐喻不传播到视频模式。角色仍沿用当前动画母版，不恢复旧照片描边或小黑角色。
+
+**中文**
+```text
+生成一张16:9中文文章正文配图，纯白背景，至少35%留白。以{当前动画母版}保持同一个Bit东，让他亲自{核心动作}，表达{唯一核心观点}。采用{新的物理隐喻和构图}；人物使用利落动漫墨线与克制赛璐璐，物件使用稀疏黑色手绘线条。情绪为{情绪与原因}，脸部和重心一致表达。少量红、橙、蓝短批注：{需要的文字，最多5—8处}。保持画面清爽，顶部留白不写类型标题。
+```
+
+**English**
+```text
+Create one 16:9 illustration for a Chinese-language article, with a pure white background and at least 35% negative space. Match Bitdong to {current animation master}. He personally {core action}, expressing {one central idea} through {fresh physical metaphor and composition}. Use crisp anime ink lines and restrained cel shading for him, with sparse black hand-drawn lines for objects. Show {emotion and cause} through his face and body weight. Add only these brief handwritten Chinese notes, using restrained red, orange, and blue: {labels, up to 5–8}. Keep the layout uncluttered and the upper margin free of category headings.
 ```
