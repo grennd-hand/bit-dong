@@ -20,7 +20,11 @@
       "outfit",
       "hands",
       "shoe_silhouette",
-      "watch_continuity"
+      "watch_continuity",
+      "shoe_pair_identifiers",
+      "dong_lateral_outline_and_interior",
+      "toe_micro_lettering",
+      "heel_fine_lines"
     ],
     "issues": []
   },
@@ -49,5 +53,5 @@
     "issues": []
   },
   "decision": "pending",
-  "notes": "模板不会自动批准资产。填写实际检查结果；没有视频或声音时保持not_run。"
+  "notes": "示例模板不会自动批准资产。鞋子细节尚未检查时相应项目保持not_run；未找回新增8张原图不得补填到asset_ids。没有视频/音频时保持not_run。"
 }

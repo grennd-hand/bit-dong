@@ -31,7 +31,27 @@
       "shoe_B": "DONG",
       "character_left_foot": null,
       "character_right_foot": null,
-      "rule": "Verify anatomical left/right against original shoe photos before a lettering close-up; do not infer from screen-left."
+      "rule": "Verify anatomical left/right against original shoe photos before a lettering close-up; do not infer from screen-left.",
+      "visual_pairing": {
+        "shoe_A_BIT": {
+          "toe_mark": "red D-shaped motif",
+          "toe_graphic": "rounded-head graphic",
+          "wording": "BIT"
+        },
+        "shoe_B_DONG": {
+          "toe_mark": "red Z-shaped motif",
+          "toe_graphic": "human-figure graphic",
+          "wording": "DONG"
+        }
+      },
+      "visual_pairing_status": "Reconciled as distinguishable source-image cues; precise micro-lettering and exact 1:1 reproduction still pending close-up review.",
+      "anatomical_foot_mapping_status": "Unverified: do not assign BIT or DONG to anatomical left/right from screen-side or mirroring.",
+      "lateral_surface": "Black high-top, blue outlined side emblem with internal decoration, purple accent, cream midsole, black outsole. Preserve the specific external lateral design of each shoe; do not mirror or invent missing decoration.",
+      "known_candidate_gaps": [
+        "Tiny red lettering/graphics on toe boxes simplified",
+        "Fine heel-line pattern simplified",
+        "DONG outer lateral blue-outlined interior pattern requires explicit opposite-facing image review"
+      ]
     }
   },
   "allowed_changes": [
