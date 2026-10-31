@@ -7,7 +7,8 @@
 ## 先看当前状态
 
 - 既有角色设计沿用仓库原版：短刺黑发、矩形黑框眼镜、粉色圆领无帽卫衣、银链、炭黑长裤、定制黑色高帮鞋。
-- 新增5张独立角色参考**候选图**，没有将未经用户选定的外观冒充最终定稿。
+- 远端当前新增5张独立角色参考**候选图**，没有将未经用户选定的外观冒充最终定稿。
+- 2026-10-30 中断会话曾报告另外8张本地新图及38张登记图，但它们未进入 GitHub `main`；详见 [恢复记录](references/recovery-2026-10-31.md)，不能把尚未恢复的素材写成已交付。
 - 提供可灵、即梦/Seedance、Runway与Google Veo的流程适配及官方来源；参数必须按实际型号与网页/API入口核验。
 - 提供可运行的素材校验和打包工具；**没有内置视频API调用，也没有声称完成跨模型视频实拍验证。**
 
@@ -39,7 +40,7 @@
 
 <img src="assets/character-reference/video-v2-candidates/bitdong-front.png" alt="Bit东正面角色候选" width="240">
 
-五张图可以用于外观审阅和明确标注的生成草案。鞋子精细图案/字样仍需统一；背面结构和左腕手表为候选版本细节；BIT/DONG左右脚映射尚未确定。详细问题见 [素材登记表](assets/asset-manifest.json) 和 [母版制作规范](references/character-sheet-production.md)。不把这些图称为4K或完整360°资产。
+五张图可以用于外观审阅和明确标注的生成草案。[BIT/DONG鞋款的具体识别线索及DONG对侧图检查规则](references/shoe-identity.md) 已拆分记录。鞋子精细图案/字样仍需统一；背面结构和左腕手表为候选版本细节；BIT/DONG左右脚映射尚未确定。详细问题见 [素材登记表](assets/asset-manifest.json) 和 [母版制作规范](references/character-sheet-production.md)。不把这些图称为4K或完整360°资产。
 
 ## 使用示例
 
