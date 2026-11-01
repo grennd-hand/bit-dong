@@ -1,0 +1,64 @@
+name: Original IP integrity
+on:
+  push:
+    branches: [main, codex/bitdong-shoe-recovery-20261031]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Test tooling
+        shell: bash
+        run: |
+          mkdir -p /tmp/bitdong-evidence
+          set -o pipefail
+          python3 -B -m unittest discover -s tests -p 'test_*.py' -v 2>&1 | tee /tmp/bitdong-evidence/tests.txt
+      - name: Audit registered assets
+        run: python3 -B scripts/verify_assets.py --fail-unregistered --json-out /tmp/bitdong-evidence/assets.json
+      - name: Verify preserved original files
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+          baseline = 'af81f1257ca097368887b3b96d35210e1692f1d6'
+          records = subprocess.check_output(['git','ls-tree','-r','-z',baseline]).split(b'\0')
+          items = []
+          for record in records:
+              if not record:
+                  continue
+              meta, rawpath = record.split(b'\t',1)
+              path = rawpath.decode('utf-8')
+              expected = meta.decode().split()[2]
+              current = subprocess.check_output(['git','hash-object','--',path],text=True).strip()
+              if current != expected:
+                  raise SystemExit('ORIGINAL FILE CHANGED: ' + path)
+              items.append({'path':path,'git_blob_sha':expected})
+          Path('/tmp/bitdong-evidence/originals.json').write_text(json.dumps({'baseline':baseline,'ok':True,'files':items},indent=2)+'\n',encoding='utf-8')
+          print('Original baseline preserved:',len(items),'files')
+          PY
+      - name: Verify standalone companion and export original handoff
+        run: |
+          python3 -B scripts/build_video_skill.py --check
+          python3 -B skills/bitdong-video/scripts/identity_guard.py
+          python3 -B skills/bitdong-video/scripts/verify_assets.py --fail-unregistered --json-out /tmp/bitdong-evidence/companion-assets.json
+          python3 -B scripts/prepare_original_pack.py --plan templates/shot-plan.example.json --out /tmp/bitdong-evidence/original-handoff --body
+      - name: Export tracked source
+        if: always()
+        run: |
+          git archive --format=zip --output=/tmp/bitdong-evidence/bitdong-source.zip HEAD
+          git rev-parse HEAD > /tmp/bitdong-evidence/commit.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bitdong-integrity-${{ github.sha }}
+          path: /tmp/bitdong-evidence/
+          retention-days: 14

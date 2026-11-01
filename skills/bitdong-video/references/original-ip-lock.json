@@ -1,0 +1,70 @@
+{
+  "baseline": "af81f1257ca097368887b3b96d35210e1692f1d6",
+  "ok": true,
+  "files": [
+    {
+      "path": "assets/character-reference/bitdong-body-language-sheet-v1.png",
+      "git_blob_sha": "95be52ce1b3cf13216ddcabc94c63a818d25eb39"
+    },
+    {
+      "path": "assets/character-reference/bitdong-character-sheet.png",
+      "git_blob_sha": "900a2ba0c691184261a807b236b4410595dc7803"
+    },
+    {
+      "path": "assets/character-reference/bitdong-expression-sheet-v1.png",
+      "git_blob_sha": "53825b9695fd4545aa1be9e9e1a7ce6e65ed77db"
+    },
+    {
+      "path": "assets/character-reference/bitdong-portrait.jpg",
+      "git_blob_sha": "dc0ef9d57af6fc5c416292119fe3ba1a710487ab"
+    },
+    {
+      "path": "assets/character-reference/bitdong-social-expression-sheet-v1.png",
+      "git_blob_sha": "86652f14351dd8a71425bc4b22f7aecc6ade9e9f"
+    },
+    {
+      "path": "assets/character-reference/shoes/bitdong-shoes-reference-board.jpg",
+      "git_blob_sha": "d88394901323b0460c4f2f67a1e2ac090e62090a"
+    },
+    {
+      "path": "assets/character-reference/shoes/shoe-reference-01.jpg",
+      "git_blob_sha": "7022406513ce26e408b15b8d82aab7c4a1f7bd25"
+    },
+    {
+      "path": "assets/character-reference/shoes/shoe-reference-02.jpg",
+      "git_blob_sha": "64c42f78f7684654e0745ebac84f0a9cd32a6ce5"
+    },
+    {
+      "path": "assets/character-reference/shoes/shoe-reference-03.jpg",
+      "git_blob_sha": "6b8cc49fa17b2a393af240b87d4eb5a37edc818e"
+    },
+    {
+      "path": "assets/character-reference/shoes/shoe-reference-04.jpg",
+      "git_blob_sha": "29b01bd8094ff7e06fc252d864d6a4e8ee75141c"
+    },
+    {
+      "path": "references/bitdong-character.md",
+      "git_blob_sha": "5e8fab7ea889cfef511f695d1207cbb9ca4ac2db"
+    },
+    {
+      "path": "references/composition-patterns.md",
+      "git_blob_sha": "6da4b2f6954491d21192f13acab4ef907993422e"
+    },
+    {
+      "path": "references/emotion-system.md",
+      "git_blob_sha": "e7c9f7272f917caa6260c222244a767ca0cb6ff5"
+    },
+    {
+      "path": "references/prompt-template.md",
+      "git_blob_sha": "19488982cb526d4fde4ce5e7f4255dffaa0e4c66"
+    },
+    {
+      "path": "references/qa-checklist.md",
+      "git_blob_sha": "cc8e6908ec85deddb1d9b380a7092732d48ad6ed"
+    },
+    {
+      "path": "references/style-dna.md",
+      "git_blob_sha": "7736c5eb3af0fb2d46a58da8ba78977048ae9a11"
+    }
+  ]
+}

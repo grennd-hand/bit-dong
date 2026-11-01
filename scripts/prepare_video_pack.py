@@ -21,6 +21,9 @@ from datetime import date, datetime
 from pathlib import Path, PurePosixPath
 from urllib.parse import urlparse
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from identity_guard import IdentityError, enforce_plan
+
 
 class PackError(ValueError):
     """An input cannot safely be exported as the requested pack."""
@@ -196,7 +199,11 @@ def validate_pack(root, plan, allow_draft=False):
         if shot.get("explicit_cut", False):
             require(nonblank(shot.get("cut_reason")),
                     f"{shot_id}: explicit_cut=true requires a nonempty cut_reason")
+        missing = set(shot["continuity_in"]) - set(shot["continuity_out"])
+        require(not missing, f"{shot_id}: end state drops continuity keys: {sorted(missing)}")
         if previous_state is not None and not shot.get("explicit_cut", False):
+            missing = set(previous_state) - set(shot["continuity_in"])
+            require(not missing, f"{shot_id}: continuity keys dropped: {sorted(missing)}")
             for key in previous_state.keys() & shot["continuity_in"].keys():
                 require(previous_state[key] == shot["continuity_in"][key],
                         f"{shot_id}: continuity conflict for {key}; explain an intentional change with explicit_cut=true")
@@ -289,7 +296,12 @@ def validate_pack(root, plan, allow_draft=False):
         "No provider API was called; provider capability records are supplied declarations, not live verification",
         "Single-subject classification, character likeness and approval authorship are not visually or externally verified by this tool",
     ])
+    try:
+        policy_enforced = enforce_plan(root, plan)
+    except (IdentityError, OSError) as exc:
+        raise PackError(str(exc)) from exc
     return {"plan": plan, "assets": selected, "shots": checked_shots,
+            "_identity_root": root, "identity_policy_enforced": policy_enforced,
             "status": "draft" if allow_draft else "approved_inputs_recorded_capabilities",
             "warnings": warnings}
 
@@ -300,6 +312,12 @@ def write_json(path, data):
 
 def export_pack(checked, output):
     """Write a new directory atomically after all validation has succeeded."""
+    root = checked.get("_identity_root")
+    require(root is not None, "Use validate_pack before export_pack")
+    try:
+        enforce_plan(root, checked["plan"])
+    except (IdentityError, OSError) as exc:
+        raise PackError(str(exc)) from exc
     output = Path(output).absolute()
     require(not output.is_symlink(), "Output directory cannot be a symlink")
     require(not output.exists() or (output.is_dir() and not any(output.iterdir())),
@@ -332,6 +350,7 @@ def export_pack(checked, output):
             write_json(directory / "shot.json", shot)
         packet = {"schema_version": "1.0", "status": checked["status"],
                   "generation_executed": False, "capabilities_verified_by_tool": False,
+                  "identity_policy_enforced": checked.get("identity_policy_enforced", False),
                   "visual_consistency_verified_by_tool": False, "plan": checked["plan"],
                   "assets": exported_assets, "warnings": checked["warnings"]}
         write_json(temporary / "pack.json", packet)
