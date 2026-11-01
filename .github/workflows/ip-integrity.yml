@@ -45,6 +45,12 @@ jobs:
           Path('/tmp/bitdong-evidence/originals.json').write_text(json.dumps({'baseline':baseline,'ok':True,'files':items},indent=2)+'\n',encoding='utf-8')
           print('Original baseline preserved:',len(items),'files')
           PY
+      - name: Verify standalone companion and export original handoff
+        run: |
+          python3 -B scripts/build_video_skill.py --check
+          python3 -B skills/bitdong-video/scripts/identity_guard.py
+          python3 -B skills/bitdong-video/scripts/verify_assets.py --fail-unregistered --json-out /tmp/bitdong-evidence/companion-assets.json
+          python3 -B scripts/prepare_original_pack.py --plan templates/shot-plan.example.json --out /tmp/bitdong-evidence/original-handoff --body
       - name: Export tracked source
         if: always()
         run: |

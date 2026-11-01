@@ -1,16 +1,1 @@
-{
-  "schema_version": "1.0",
-  "project": "bitdong-original-ip-video-paused",
-  "character_id": "bitdong",
-  "design_version": "1.0-inherited",
-  "provider": "generic",
-  "provider_surface": "unspecified",
-  "model": null,
-  "capabilities_verified_at": null,
-  "official_sources": [],
-  "aspect_ratio": "9:16",
-  "resolution": null,
-  "negative_prompt_supported": null,
-  "planning_note": "此示例已停用，空shots会被校验器拒绝；不是可运行生成计划。用户否定本轮外观方向。先遵守VIDEO_EXTENSION.md，取得忠实原版且真正获认可的单图素材，再填写真实镜头；不得重用被否定的旧候选。",
-  "shots": []
-}
+{"schema_version":"1.0","project":"bitdong-original-greeting","character_id":"bitdong","design_version":"1.0-inherited","provider":"generic","provider_surface":"unspecified","model":null,"capabilities_verified_at":null,"official_sources":[],"aspect_ratio":"9:16","resolution":null,"negative_prompt_supported":null,"planning_note":"原版IP两镜头准备示例。没有生成图片或视频；每段5秒是策划值，运行前按目标平台核验。先运行prepare_original_pack.py取得实际原图与提示，再登记真实首帧。","shots":[{"id":"s01","duration_seconds":5,"mode":"text_only","reference_ids":[],"first_frame_id":null,"last_frame_id":null,"prompt_zh":"Bit东保持原版造型，露出克制而自然的微笑，抬起右手打招呼，结束时右手保持抬起。中景，镜头缓慢推进，柔和正面光。","prompt_en":"Bit Dong gives a small, natural smile and raises his right hand in greeting, ending with his hand raised. Medium shot with a slow push-in and soft frontal light. Preserve the original character design.","frame_prompt_zh":"原版Bit东在简洁2D工作室内面向镜头。中景，双手自然放下；保持原版脸型、发型、眼镜、服装和画风。","frame_prompt_en":"The original Bit Dong character faces the camera in a minimal 2D studio. Medium shot, hands relaxed at his sides. Match the original face, hairstyle, glasses, outfit, and rendering.","negative_prompt":null,"dialogue_zh":null,"continuity_in":{"character":"original_bitdong_design","outfit":"original_character_sheet_outfit","accessories":"match_original_reference","right_hand":"relaxed_down","location":"minimal_2d_studio","lighting":"soft_even_front_light","facing":"toward_camera"},"continuity_out":{"character":"original_bitdong_design","outfit":"original_character_sheet_outfit","accessories":"match_original_reference","right_hand":"raised_in_greeting","location":"minimal_2d_studio","lighting":"soft_even_front_light","facing":"toward_camera"},"explicit_cut":false},{"id":"s02","duration_seconds":5,"mode":"text_only","reference_ids":[],"first_frame_id":null,"last_frame_id":null,"prompt_zh":"承接上镜头，Bit东从右手抬起的姿势开始，自然放下右手，再轻轻点头，最后保持平静微笑。镜头固定，保持同一工作室、光线及原版人物。","prompt_en":"Continue from the raised right hand. Bit Dong lowers it naturally, gives a small nod, and settles into a relaxed smile. Locked camera, same studio, lighting, and original character design.","frame_prompt_zh":"同一原版Bit东、同一工作室，中近景；右手已经抬起准备承接上一镜头。保持相同服饰、脸部与光线。","frame_prompt_en":"Same original Bit Dong character and studio, in a medium close-up. His right hand is already raised to continue the previous shot. Keep the face, outfit, and lighting consistent.","negative_prompt":null,"dialogue_zh":null,"continuity_in":{"character":"original_bitdong_design","outfit":"original_character_sheet_outfit","accessories":"match_original_reference","right_hand":"raised_in_greeting","location":"minimal_2d_studio","lighting":"soft_even_front_light","facing":"toward_camera"},"continuity_out":{"character":"original_bitdong_design","outfit":"original_character_sheet_outfit","accessories":"match_original_reference","right_hand":"relaxed_down","location":"minimal_2d_studio","lighting":"soft_even_front_light","facing":"toward_camera"},"explicit_cut":false}]}

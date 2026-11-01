@@ -1,0 +1,212 @@
+{
+  "schema_version": "1.0",
+  "character_id": "bitdong",
+  "registered_at": "2026-10-30",
+  "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6",
+  "notes": [
+    "登记状态不等于视觉验收，candidate不得自动作为approved。",
+    "完整保留原素材字节；旧鞋版与旧例图只归档标记，不删除。"
+  ],
+  "assets": [
+    {
+      "id": "performance-body",
+      "path": "assets/character-reference/bitdong-body-language-sheet-v1.png",
+      "role": "performance_reference",
+      "status": "source",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "仅用于重心、姿势和动作；衣服与配件须遵循当前版本。"
+      ],
+      "sha256": "52d984561c9bd94925120b3216b856b55f9750b7252738b9849d9e05884d50ac",
+      "width": 1536,
+      "height": 1024,
+      "color_mode": "RGB",
+      "bytes": 1477695
+    },
+    {
+      "id": "source-character-sheet",
+      "path": "assets/character-reference/bitdong-character-sheet.png",
+      "role": "design_source",
+      "status": "source",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "继承的动漫设计来源，四姿态共用1672×941画布；部分鞋字存在误写。"
+      ],
+      "sha256": "bd373fea07359068034f5fe4113f1ce7efb9247ce9d5dd05b064bafb58d3d608",
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "bytes": 1794606
+    },
+    {
+      "id": "performance-work",
+      "path": "assets/character-reference/bitdong-expression-sheet-v1.png",
+      "role": "performance_reference",
+      "status": "source",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "只指导表演。顿悟/兴奋等格的圆大眼和圆化镜框不得改写身份。"
+      ],
+      "sha256": "72cfda8e56c4fdba034c27baa4c7e8faca99dcc2022d6c86b33c4a5b6f675e46",
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "bytes": 1824138
+    },
+    {
+      "id": "identity-photo",
+      "path": "assets/character-reference/bitdong-portrait.jpg",
+      "role": "identity_source",
+      "status": "source",
+      "set_id": "legacy-source-20260813",
+      "single_subject": true,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "真人身份起源；建立或修订动画身份时才使用，不作为视频输入。"
+      ],
+      "sha256": "a1ad138fdfdef00e1a8a19e1dd5e9df0348cc5c2fe2406af94a026a1c92ed2c6",
+      "width": 1080,
+      "height": 1920,
+      "color_mode": "RGB",
+      "bytes": 421784
+    },
+    {
+      "id": "performance-social",
+      "path": "assets/character-reference/bitdong-social-expression-sheet-v1.png",
+      "role": "performance_reference",
+      "status": "source",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "仅用于情绪演出；不是独立高清脸部母版。"
+      ],
+      "sha256": "da531ac2397ed9b48fb982073abe6a71cf575605be89daf166c51fbdc0511697",
+      "width": 1448,
+      "height": 1086,
+      "color_mode": "RGB",
+      "bytes": 1987018
+    },
+    {
+      "id": "source-shoe-board",
+      "path": "assets/character-reference/shoes/bitdong-shoes-reference-board.jpg",
+      "role": "detail_source",
+      "status": "source",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "鞋型配色和字样来源，不能继承照片背景；BIT/DONG左右脚归属未核实。"
+      ],
+      "sha256": "4d955e0ac9fd55f0ccb843d6e2ed7745fd95f9c73edbc465ac910aea650d1a55",
+      "width": 2360,
+      "height": 1780,
+      "color_mode": "RGB",
+      "bytes": 1249257
+    },
+    {
+      "id": "source-shoe-reference-01",
+      "path": "assets/character-reference/shoes/shoe-reference-01.jpg",
+      "role": "detail_source",
+      "status": "source",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "原始高分辨率鞋照，只供鞋细节核对；不自动判断左右脚或复制拍摄环境。"
+      ],
+      "sha256": "1e49e5ee78134c1b0c1d96e638cc1539dcc52dcb8f5c20949eedeace28f77721",
+      "width": 5712,
+      "height": 4284,
+      "color_mode": "RGB",
+      "bytes": 4338562
+    },
+    {
+      "id": "source-shoe-reference-02",
+      "path": "assets/character-reference/shoes/shoe-reference-02.jpg",
+      "role": "detail_source",
+      "status": "source",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "原始高分辨率鞋照，只供鞋细节核对；不自动判断左右脚或复制拍摄环境。"
+      ],
+      "sha256": "d097b46dffb4f0519030fea62a65575af74cbff4a07863cb7fe6423a12632c9f",
+      "width": 5712,
+      "height": 4284,
+      "color_mode": "RGB",
+      "bytes": 2970231
+    },
+    {
+      "id": "source-shoe-reference-03",
+      "path": "assets/character-reference/shoes/shoe-reference-03.jpg",
+      "role": "detail_source",
+      "status": "source",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "原始高分辨率鞋照，只供鞋细节核对；不自动判断左右脚或复制拍摄环境。"
+      ],
+      "sha256": "c5848ddd3e9c67c1efb1cfdf84b4f3d1c42f2678fef23128760df37e6ba6ccbb",
+      "width": 5712,
+      "height": 4284,
+      "color_mode": "RGB",
+      "bytes": 3463004
+    },
+    {
+      "id": "source-shoe-reference-04",
+      "path": "assets/character-reference/shoes/shoe-reference-04.jpg",
+      "role": "detail_source",
+      "status": "source",
+      "set_id": "legacy-source-20260813",
+      "single_subject": false,
+      "provenance": {
+        "kind": "inherited_repository_asset",
+        "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6"
+      },
+      "notes": [
+        "原始高分辨率鞋照，只供鞋细节核对；不自动判断左右脚或复制拍摄环境。"
+      ],
+      "sha256": "eac0741e853cf598c175f9e3844439cc81600a9891935ed70be0a846d9416782",
+      "width": 5712,
+      "height": 4284,
+      "color_mode": "RGB",
+      "bytes": 3427020
+    }
+  ]
+}
