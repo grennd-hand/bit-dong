@@ -4,84 +4,36 @@
   "display_name": "Bit东 / BIT东",
   "english_name": "Bit Dong",
   "design_version": "1.0-inherited",
-  "release_status": "inherited_design_with_candidate_video_masters",
+  "release_status": "original_ip_restored_video_direction_rejected",
   "source_revision": "af81f1257ca097368887b3b96d35210e1692f1d6",
   "approved_master_set": null,
-  "candidate_master_set": "bitdong-v2-candidate-20261030",
-  "locked_attributes": {
-    "identity": "Adult Chinese male; angular oval face matching the selected animated master.",
-    "hair": "Short spiky black hair, tapered sides, stable hairline and silhouette.",
-    "eyes": "Natural adult-sized eyes; normal blinking and gaze changes are allowed.",
-    "glasses": "Dark thick rectangular frames with clear lenses; stable bridge and temples.",
-    "top": "Plain coral-pink crewneck sweatshirt, no hood, no added chest emblem.",
-    "necklace": "One simple silver chain.",
-    "trousers": "Charcoal relaxed full-length trousers.",
-    "footwear": "Customized black high-top sneakers, cream midsoles, black outsoles, blue side accents and red-pink toe details.",
-    "rendering": "Mature clean 2D anime ink with restrained 1-2 level cel shading.",
-    "proportions": "Natural adult proportions, approximately 7-7.5 heads tall; compare silhouettes visually."
+  "candidate_master_set": null,
+  "authoritative_character_spec": "references/bitdong-character.md",
+  "reference_authority": {
+    "identity_and_face": "assets/character-reference/bitdong-portrait.jpg",
+    "animated_design_outfit_proportions_rendering": "assets/character-reference/bitdong-character-sheet.png",
+    "work_emotions": "assets/character-reference/bitdong-expression-sheet-v1.png",
+    "social_emotions": "assets/character-reference/bitdong-social-expression-sheet-v1.png",
+    "body_language": "assets/character-reference/bitdong-body-language-sheet-v1.png",
+    "custom_shoes": "assets/character-reference/shoes/bitdong-shoes-reference-board.jpg"
   },
+  "excluded_from_default_reference_sets": ["bitdong-v2-candidate-20261030"],
   "continuity_choices": {
     "watch": {
-      "candidate_choice": "dark watch on the character's left wrist",
-      "approval_status": "pending",
-      "rule": "Choose once per version/continuous scene; do not swap wrists or pop in and out."
+      "approval_status": "not_established",
+      "rule": "Do not impose a watch or wrist assignment from the rejected candidate set; follow the actual original reference used for the shot."
     },
     "shoe_lettering": {
-      "shoe_A": "BIT",
-      "shoe_B": "DONG",
       "character_left_foot": null,
       "character_right_foot": null,
-      "rule": "Verify anatomical left/right against original shoe photos before a lettering close-up; do not infer from screen-left.",
-      "visual_pairing": {
-        "shoe_A_BIT": {
-          "toe_mark": "red D-shaped motif",
-          "toe_graphic": "rounded-head graphic",
-          "wording": "BIT"
-        },
-        "shoe_B_DONG": {
-          "toe_mark": "red Z-shaped motif",
-          "toe_graphic": "human-figure graphic",
-          "wording": "DONG"
-        }
-      },
-      "visual_pairing_status": "Reconciled as distinguishable source-image cues; precise micro-lettering and exact 1:1 reproduction still pending close-up review.",
-      "anatomical_foot_mapping_status": "Unverified: do not assign BIT or DONG to anatomical left/right from screen-side or mirroring.",
-      "lateral_surface": "Black high-top, blue outlined side emblem with internal decoration, purple accent, cream midsole, black outsole. Preserve the specific external lateral design of each shoe; do not mirror or invent missing decoration.",
-      "known_candidate_gaps": [
-        "Tiny red lettering/graphics on toe boxes simplified",
-        "Fine heel-line pattern simplified",
-        "DONG outer lateral blue-outlined interior pattern requires explicit opposite-facing image review"
-      ]
+      "rule": "Use original custom-shoe visual sources. Do not impose unverified D/Z motif associations or anatomical left/right mappings."
     }
   },
-  "allowed_changes": [
-    "eyebrows",
-    "eyelids",
-    "gaze",
-    "mouth shape",
-    "emotion",
-    "pose",
-    "gesture",
-    "camera",
-    "scene",
-    "lighting"
-  ],
-  "reference_policy": {
-    "portrait": "Identity origin only; consult when establishing or revising the animated design.",
-    "legacy_character_sheet": "Inherited design source, not a single-subject video frame.",
-    "shoe_photos": "Shoe detail only; never transfer background or photographic rendering.",
-    "expression_and_pose_sheets": "Performance only; cannot redefine geometry or outfit.",
-    "candidate_masters": "Review and draft generation only until actually selected.",
-    "archived_assets": "Exclude from automatic selection."
-  },
-  "approval_policy": {
-    "required_record": [
-      "approved_master_set",
-      "asset status=approved",
-      "provenance.approved_by",
-      "provenance.approved_at",
-      "file sha256"
-    ],
-    "notes": "Record the user's actual selection or documented approval. Do not fabricate approval from script validation."
-  }
+  "video_extension": "VIDEO_EXTENSION.md",
+  "video_status": "paused_pending_original_ip_fidelity",
+  "notes": [
+    "The user rejected the upgraded visual direction; new candidates must not redefine the original IP.",
+    "Exclusion here is a workflow policy, not a claim that the unchanged exporter enforces every field.",
+    "Image files and historical manifest entries remain untouched for traceability, not as approved input assets."
+  ]
 }
